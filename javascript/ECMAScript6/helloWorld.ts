@@ -31,3 +31,12 @@ function makeListReverse(arr) {
 const successList = makeListReverse(result.success);
 console.log(successList);
 
+var hola: string = 'hello';
+console.log(hola);
+var boolean: boolean && number = 2 || true;
+console.log(boolean)
+
+let jaja = 'jajaja';
+jaja = 22;
+console.log(jaja)
+
