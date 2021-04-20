@@ -33,10 +33,9 @@ console.log(successList);
 
 var hola: string = 'hello';
 console.log(hola);
-var boolean: boolean && number = 2 || true;
+var boolean: boolean = false || true;
 console.log(boolean)
 
-let jaja = 'jajaja';
-jaja = 22;
+let jaja = 'jaja';
 console.log(jaja)
 
