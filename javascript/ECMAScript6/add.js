@@ -1,7 +1,3 @@
-const add = (x, y) => {
-  return x + y;
-}
-
-/*export { add };*/
-
-module.exports = {add};
+console.log('hola mundo');
+var pi = 3.14;
+pi = 2;

@@ -1,4 +1,4 @@
-let a = 'hello';
+let a = 'kkkkk';
 console.log(a);
 
 function catTalk() {
@@ -16,4 +16,14 @@ for (let i = 0; i < 3; i++) {
     };
   }
 }
-console.log(printNumTwo());
+
+let b = 'hole';
+
+const hello = () => {
+  // body... 
+  let b = 'hello';
+  return b;
+}
+console.log(b);
+console.log(hello());
+

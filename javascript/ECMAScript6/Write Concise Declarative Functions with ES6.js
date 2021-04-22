@@ -20,3 +20,14 @@ var num = addNum.num;
 addNum.addNum(8);
 console.log(addNum.num)
 addNum
+
+const edadDeUnaPersona = {
+	edadActual: 8,
+	actualizarEdad(años) {
+		return this.edadActual += años;
+	}
+}
+console.log(`Jack tiene ${edadDeUnaPersona.edadActual} años`);
+//han pasado 5 sños
+edadDeUnaPersona.actualizarEdad(5); //actualiza la edad
+console.log(`Han pasado 5 años por lo que Jack ahora tiene ${edadDeUnaPersona.edadActual} años`)

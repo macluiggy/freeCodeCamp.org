@@ -37,5 +37,9 @@ var boolean: boolean = false || true;
 console.log(boolean)
 
 let jaja = 'jaja';
-console.log(jaja)
+console.log(jaja);
 
+const pi = 3.14;
+
+var soy_alto = false;
+const e = 2.18;

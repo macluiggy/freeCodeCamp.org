@@ -1,4 +1,3 @@
 const magic = () => new Date();
 
-console.log(magic)
-conggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
+console.log(magic());

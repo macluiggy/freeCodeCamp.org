@@ -31,3 +31,6 @@ var boolean = false || true;
 console.log(boolean);
 var jaja = 'jaja';
 console.log(jaja);
+var pi = 3.14;
+var soy_alto = false;
+var e = 2.18;

@@ -31,3 +31,13 @@ function makeListReverse(arr) {
 const successList = makeListReverse(result.success);
 console.log(successList);
 
+function makeAnotherList(arr) {
+  const skippedItems = [];
+  arr.forEach( function(el) {
+  // statements
+  skippedItems.unshift(`<li class="aviso">${el}</li>`)
+});
+  return skippedItems;
+}
+const skippedList = makeAnotherList(result.skipped);
+console.log(skippedList);
