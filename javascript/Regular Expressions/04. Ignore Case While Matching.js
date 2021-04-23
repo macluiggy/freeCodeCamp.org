@@ -4,3 +4,4 @@ let result = fccRegex.test(myString);
 console.log(result);
 
 console.log(/123unodostres/i.test('123unoDosTres'));
+console.log(/unO/i.test('uNo'));
