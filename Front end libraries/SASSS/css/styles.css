@@ -78,4 +78,79 @@
   border-radius: 125px;
 }
 
+.container1, .container2 {
+  width: 49.5%;
+  border: solid;
+  float: left;
+}
+
+.container2 {
+  width: 49.5%;
+  border: solid;
+  float: left;
+}
+
+.gray {
+  background-color: gray;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+  -webkit-box-shadow: 0 0 36px black;
+  -moz-box-shadow: 0 0 36px black;
+  -ms-box-shadow: 0 0 36px black;
+  box-shadow: 0 0 36px black;
+}
+
+.violet {
+  background-color: violet;
+  width: 140px;
+  height: 140px;
+  margin: 0 auto;
+  -webkit-box-shadow: 0 0 49px black;
+  -moz-box-shadow: 0 0 49px black;
+  -ms-box-shadow: 0 0 49px black;
+  box-shadow: 0 0 49px black;
+}
+
+.magenta {
+  background-color: magenta;
+  width: 160px;
+  height: 160px;
+  margin: 0 auto;
+  -webkit-box-shadow: 0 0 64px black;
+  -moz-box-shadow: 0 0 64px black;
+  -ms-box-shadow: 0 0 64px black;
+  box-shadow: 0 0 64px black;
+}
+
+.orange {
+  background-color: orange;
+  width: 180px;
+  height: 180px;
+  margin: 0 auto;
+  -webkit-box-shadow: 0 0 81px black;
+  -moz-box-shadow: 0 0 81px black;
+  -ms-box-shadow: 0 0 81px black;
+  box-shadow: 0 0 81px black;
+}
+
+.black {
+  background-color: black;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  -webkit-box-shadow: 0 0 100px black;
+  -moz-box-shadow: 0 0 100px black;
+  -ms-box-shadow: 0 0 100px black;
+  box-shadow: 0 0 100px black;
+}
+
+.container1, .container2 {
+  background: linear-gradient(to right, red, blue);
+}
+
+.container2 {
+  border-radius: 100px;
+}
+
 /*# sourceMappingURL=styles.css.map */

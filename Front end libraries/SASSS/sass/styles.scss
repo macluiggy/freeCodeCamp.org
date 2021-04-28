@@ -23,3 +23,29 @@ $x: 1;
   }
   $x: $x + 1;
 }
+
+@for $i from 1 through 2 {
+	.container#{$i} {
+		width: 49.5%;
+		border: solid;
+		float: left;
+	}
+}
+$colors2: (6: gray, 7: violet, 8: magenta, 9: orange, 10: black);
+@each $key, $color2 in $colors2 {
+	.#{$color2} {
+		background-color: $color2;
+		width: 20px * $key;
+		height: 20px * $key;
+		@include center_block();
+		@include box_shadow(0, 0, 1px * $key*$key, black)
+	}
+}
+
+.container1 {
+	background: linear-gradient(to right, red, blue)
+}
+.container2 {
+	@extend .container1;
+	border-radius: 100px;
+}
