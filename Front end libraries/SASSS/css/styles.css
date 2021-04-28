@@ -1,0 +1,81 @@
+.text-1 {
+  border: solid 3px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.text-2 {
+  border: solid 3px;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.text-3 {
+  border: solid 3px;
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.text-4 {
+  border: solid 3px;
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.text-5 {
+  border: solid 3px;
+  width: 250px;
+  height: 250px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.white {
+  background-color: white;
+}
+
+.red {
+  background-color: red;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.green {
+  background-color: green;
+}
+
+.text-1 {
+  border-radius: 5px;
+}
+
+.text-2 {
+  border-radius: 20px;
+}
+
+.text-3 {
+  border-radius: 45px;
+}
+
+.text-4 {
+  border-radius: 80px;
+}
+
+.text-5 {
+  border-radius: 125px;
+}
+
+/*# sourceMappingURL=styles.css.map */

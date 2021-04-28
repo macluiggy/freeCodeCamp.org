@@ -27,3 +27,13 @@ const hello = () => {
 console.log(b);
 console.log(hello());
 
+let hola = 'hola my friend';
+
+function saluda () {
+  // body... 
+  var hola = 'hello mi amigo';
+  console.log(hola);
+}
+saluda();
+console.log(hola);
+
