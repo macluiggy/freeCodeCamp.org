@@ -80,3 +80,53 @@ function respuestaALaPeticion(respuesta, nombre) {
     // body... 
     console.log(`${nombre}, ${respuesta} `)
 }
+
+
+const juanito = {
+    edad: 16,
+    puedePasar: false,
+    actualizarEdad(años) {
+        return this.edad += años;
+    }
+}
+let edadSuficiente = new Promise((resolve, reject) => {
+
+    if (juanito.edad >= 18) {
+        // statement
+        resolve(juanito.edad)
+    } else {
+        // statement
+        reject(juanito.edad)
+    }
+});
+
+edadSuficiente.then(
+    (result) => {
+        console.log(`Junito tiene ${result} años, puede pasar`);
+    },
+    (error) => {
+        console.log(`Junaito tiene ${error} años, no puede pasar`);
+    }
+)
+
+juanito.actualizarEdad(10);
+
+
+let edadSuficiente2 = new Promise((resolve, reject) => {
+
+    if (juanito.edad >= 18) {
+        // statement
+        resolve(juanito.edad);
+    } else {
+        // statement
+        reject(juanito.edad);
+    }
+});
+edadSuficiente2.then(
+    (result) => {
+        console.log(`Junito tiene ${result} años, puede pasar`);
+    },
+    (error) => {
+        console.log(`Junaito tiene ${error} años, no puede pasar`);
+    }
+)

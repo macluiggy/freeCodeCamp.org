@@ -16,7 +16,7 @@ function freezeObj() {
 const PI = freezeObj();
 console.log(PI)
 
-function freeAnotherObj(argument) {
+function freezeAnotherObj(argument) {
     // body... 
     const MATH_CONSTANTS = {
         e: 2.18,
@@ -25,5 +25,17 @@ function freeAnotherObj(argument) {
     MATH_CONSTANTS.e = 2;
     return MATH_CONSTANTS.e;
 }
-const e = freeAnotherObj();
+const e = freezeAnotherObj();
 console.log(e)
+
+let divideConstantes = () => {
+    const MATH_CONSTANTS = {
+        pie: 3.14 / 2.18,
+    }
+    Object.freeze(MATH_CONSTANTS);
+    MATH_CONSTANTS. pie = 1;
+    return MATH_CONSTANTS.pie;
+}
+
+const pie = divideConstantes();
+console.log(pie);

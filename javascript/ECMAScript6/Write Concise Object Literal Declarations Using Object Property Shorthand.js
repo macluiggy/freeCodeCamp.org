@@ -20,6 +20,15 @@ function gato(color, años) {
 let michito = gato('amarillo', 5);
 console.log(`Mi gato es de color ${michito.color} y tiene ${michito.años} años de edad`)
 
-let car = (model, year) => {model, year};
+function carro (model, year) {
+	// body... 
+	return {model, year};
+}
+let car2 = carro('testla S', 2019);
+console.log(car2)
+
+let car = (model, year) => {
+	return {model, year};
+}
 let car1 = car('testla S', 2019)
 console.log(car1)
