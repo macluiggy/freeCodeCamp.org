@@ -53,3 +53,14 @@ console.log(`Tengo un carro ${lamorghini.marca} modelo '${lamorghini.modelo}' de
 
 const tesla = new cars('tesla', `S`, 2019);
 console.log(tesla);
+
+class Soldados {
+    constructor(cadete, capitan, mayor) {
+        this.cadete = cadete;
+        this.capitan = capitan;
+        this.mayor = mayor;
+    }
+}
+
+let soldados = new Soldados('juan', 'alberto', 'robertototo');
+console.log(soldados);

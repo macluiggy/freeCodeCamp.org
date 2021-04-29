@@ -70,3 +70,22 @@ min1.sumMin = 10;
 console.log(min1.min);
 //ahora miremos el tiempo actual en segundos
 console.log(min1.toSec) //llama la propiedad toSec del setter para convertir la propiedad min en segundos;
+
+class Distancia {
+    constructor(m) {
+        this.m = m;
+    }
+
+    get cm() {
+        return this.m * 100
+    }
+    set nuevoMetro(nuevoMetro) {
+        this.m = nuevoMetro;
+    }
+}
+const distancia1 = new Distancia(1);
+console.log(`${distancia1.m} metros`);
+console.log(`${distancia1.cm} centimetros`);
+distancia1.nuevoMetro = 10;
+console.log(`${distancia1.m} metros`);
+console.log(`${distancia1.cm} centimetros`);

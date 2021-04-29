@@ -22,3 +22,6 @@ const personas = {
 
 const { persona1: { nombre: name1, apellido: lastName1 } } = personas;
 console.log(`Me llamo ${name1.toLocaleUpperCase()} ${lastName1.toUpperCase()}`);
+
+const {persona2:{nombre:name2, apellido: lastName2}} = personas;
+console.log(`Me llamo ${name2.toLocaleUpperCase()} ${lastName2.toUpperCase()}`);
