@@ -3,4 +3,4 @@ let petRegex = /dog|cat|bird|fish/; // Change this line
 let result = petRegex.test(petString);
 console.log(result);
 
-console.log(/perrO | perro|gato|gAto|al|alacran|aguiLa|aguila/.test('gato, perro, aguila, cocodrilo, culebra, raton, pararito,'))
+console.log(/perrO | perro|gato|gAto|al|alacran|aguiLa|aguila/.test('gato, perro, aguila, cocodrilo, culebra, raton, pararito,'));
