@@ -12,3 +12,4 @@ firstRegex.test(notFirst);
 console.log(notFirst.match(firstRegex));
 
 console.log(/^El/.test('El man el loco El man esta loco'))
+console.log('Alhfhfha madre'.match(/^a.+a/gi))
