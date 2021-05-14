@@ -4,3 +4,5 @@ let result = reRegex.test(repeatNum);
 let resutl2 = repeatNum.match(reRegex);
 console.log(result)
 console.log(resutl2)
+let quote = /"(?<quotedText>[^"]*)"/g;
+console.log('He said "stop"'.replace(quote, '«$<quotedText>»')) // => 'Hesaid «stop»'
