@@ -9,6 +9,7 @@ let foods = {
 
 function checkInventory(scannedItem) {
   // Only change code below this line
+  if (foods[scannedItem] === undefined) console.log('Iterm not found');
   return foods[scannedItem];
   // Only change code above this line
 }
@@ -17,4 +18,3 @@ console.log(checkInventory("apples"));
 
 let arr = [1,2,4];
 let total = 12;
-+
