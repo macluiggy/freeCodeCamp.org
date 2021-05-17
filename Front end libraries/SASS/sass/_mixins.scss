@@ -1,0 +1,23 @@
+@mixin border($val) {
+	@if $val == fino {
+		border: solid 1px ;
+	} @else if $val == normal {
+		border: solid 3px ;
+	} @else if $val == grueso {
+		border: solid 6px ;
+	}
+}
+
+@mixin center_block() {
+	margin: 0 auto;
+}
+
+@mixin background_color($color) {
+	background-color: $color;
+}
+@mixin box_shadow($x, $y, $blur, $spread_color) {
+	-webkit-box-shadow: $x $y $blur $spread_color;
+  	-moz-box-shadow: $x $y $blur $spread_color;
+  	-ms-box-shadow: $x $y $blur $spread_color;
+  	box-shadow: $x $y $blur $spread_color;
+}

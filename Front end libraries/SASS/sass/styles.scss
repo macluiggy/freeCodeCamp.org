@@ -1,9 +1,51 @@
+@import 'mixins';
+@for $i from 1 to 6 {
+	.text-#{$i} {
+		@include border(normal);
+		width: 50px * $i;
+		height: 50px * $i;
+		text-align: center;
+		@include center_block();
+	}
+}
 
-
+$colors: (1: white, 2: red, 3: blue, 4: yellow, 5: green);
+@each $key, $color in $colors {
+	.#{$color} {
+		background-color: $color;
+	}
+}
 
 $x: 1;
 @while $x < 6 {
-	.text-#{$x} {
-		width: 100px;
+  .text-#{$x} {
+  	border-radius: 5px*$x*$x;
+  }
+  $x: $x + 1;
+}
+
+@for $i from 1 through 2 {
+	.container#{$i} {
+		width: 49.5%;
+		border: solid;
+		float: left;
 	}
+}
+$colors2: (6: gray, 7: violet, 8: magenta, 9: orange, 10: black);
+@each $key, $color2 in $colors2 {
+	.#{$color2} {
+		background-color: $color2;
+		width: 20px * $key;
+		height: 20px * $key;
+		@include center_block();
+		@include box_shadow(0, 0, 1px * $key*$key, black)
+	}
+}
+
+.container1 {
+	background: linear-gradient(to right, red, blue)
+}
+.container2 {
+	@extend .container1;
+	border-radius: 100px;
 }

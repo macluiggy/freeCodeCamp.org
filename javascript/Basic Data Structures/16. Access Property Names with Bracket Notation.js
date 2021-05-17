@@ -9,7 +9,7 @@ let foods = {
 
 function checkInventory(scannedItem) {
   // Only change code below this line
-  if (foods[scannedItem] === undefined) console.log('Iterm not found');
+  if (foods[scannedItem] === undefined) return 'Iterm not found'
   return foods[scannedItem];
   // Only change code above this line
 }
