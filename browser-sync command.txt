@@ -1,0 +1,13 @@
+path/.../browser-sync start --server --files ["* .html", "* .css", "* .js"]
+
+para hacer un alias:
+
+path\...\doskey alias=valor original del alias
+
+ejemplo:
+path\...\doskey browserSync=browser-sync start --server --files ["* .html", "* .css", "* .js"]
+
+
+
+PARA AJAX
+path/.../ws --spa file.html
