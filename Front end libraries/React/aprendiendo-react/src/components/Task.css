@@ -2,7 +2,7 @@
 	background-color: yellow;
 	display: flex;
 	align-items: center;
-	padding-left: 1em;
+	padding: 1em;
 }
 .title {
 	font-weight: bolder;
