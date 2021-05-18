@@ -1,25 +1,83 @@
-import logo from './logo.svg';
+/*import logo from './logo.svg';*/
 import './App.css';
+import React, {Component} from 'react';
+import tasks from './sample/tasks.json';
 
-function Saluda() {
-  // body... 
-  return (
-    <div class="hello">hello world</div>
+
+class App extends Component {
+  render() {
+    return <h1>Hello world</h1>
+  }
+}
+
+export default App;
+
+/*function Saluda() {
+    // body... 
+    return (
+        <div class="hello">hello world</div>
     )
 }
+
 function holamundo() {
-  return (
-    <div class="hello">Hola mundo</div>
+    return (
+        <div class="hello">Hola mundo</div>
     )
 }
 
 let noHayTexto = () => <div class="hello">No hay testo</div>
 
-const ChaoMundo = () => <div class="hello">chao mundo</div>
-function App() {
-  return (
-    <div className="App">This is my component: <Saluda/> {holamundo()} {noHayTexto()} <ChaoMundo/> </div>
-  );
+const ChaoMundo = () => <div class="hello">chao mundo</div>*/
+
+/*function DiAlgo(props) {
+    return (<div class="hello"> 
+    <h3>{props.subtitle}</h3>
+     {props.texto} 
+     </div>)
+}*/
+
+/*class DiAlgo extends React.Component {
+
+    toggleShow = () => {
+        //if (this.state.mostrar) {
+        //  // statement
+        //  this.setState({ mostrar: false })
+        //} else {
+        //  // statement
+        //  this.setState({ mostrar: true })
+        //}
+        this.setState({ mostrar: !this.state.mostrar })
+
+    }
+
+    state = {
+        mostrar: true,
+    }
+    render() {
+        if (this.state.mostrar) {
+            return (
+                <div class="hello"> 
+    <h3>{this.props.subtitle}</h3>
+     {this.props.texto}
+     <button onClick={this.toggleShow}>Ocultar</button>
+     </div>
+            )
+        }
+        return (
+            <div class="hello"> 
+    <h3>{this.props.nada}</h3>
+    <button onClick={this.toggleShow}>Mostrar</button>
+     </div>
+        )
+    }
 }
 
-export default App;
+function App() {
+    return (
+        <div className="App">This is my component:
+     <Saluda/> {holamundo()} {noHayTexto()} <ChaoMundo/> 
+     <DiAlgo texto="hola mi compa"/>
+     <DiAlgo texto="hola mi yabe" subtitle="Que mas" nada="no hay nada que mostrar"/>
+     </div>
+    );
+}*/
