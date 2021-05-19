@@ -20,8 +20,8 @@ class Task extends Component {
 		{description} - 
 		{done} - 
 		{id} 
-        <input type="checkbox"/>
-        <button style={bottonDelete}>x</button>
+        <input type="checkbox" onInput={this.props.checkDone.bind(this, id)}/>
+        <button style={bottonDelete} onClick={this.props.deleteTask.bind(this, id)}>x</button>
 		</div>
     }
 }
