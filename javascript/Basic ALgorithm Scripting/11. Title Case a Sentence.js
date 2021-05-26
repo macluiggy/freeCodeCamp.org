@@ -7,7 +7,7 @@ function titleCase(str) {
 		if (i === 0) {
 			newStr += word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
 		} else {
-			newStr += ` ${word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()}`;
+			n  ewStr += ` ${word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()}`;
 		}
 	}
   return newStr;
