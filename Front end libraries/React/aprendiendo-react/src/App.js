@@ -10,6 +10,10 @@ import { BrowserRouter as Router, Route, Link} from 'react-router-dom';
 
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+  }
+  
   state = {
     tasks: tasks
   }

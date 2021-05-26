@@ -16,15 +16,12 @@ console.log(cantidadVocalesYNumeros())
 //fucnion que debuelve la cantidad de vocales y numeros y la palabra resultante
 let cantidadVocalesYNumerosConLaPalabra = (string) => {
 	let result = string.match(regex);
-	let palabra = '';
-	for(let i = 0, length1 = result.length; i < length1; i++){
-		palabra += result[i];
-	}
+	let palabra = result.join('');
 	return `La cantidad de caracteres es ${result.length} y la palabra que se retorna es ${palabra} `;
 }
 console.log(cantidadVocalesYNumerosConLaPalabra('hola mi llabe 123'));
 
 function encuentraLosNumeros (string) {
-	return string.match(/[0-9]/g);
+	return string.match(/[0-9]/g).join('');
 }
 console.log(encuentraLosNumeros('h0l4 m1 4m160'))

@@ -1,9 +1,9 @@
 let quoteSample = "3 blind mice.";
 let myRegex = /[^aeiou^0-9]/ig; // Change this line
-let result = quoteSample.match(myRegex); // Change this line
+let result = quoteSample.match(myRegex).join(''); // Change this line
 console.log(result);
 
-let filterOnlyLetters = el => el.match(/[^0-9^ ]/g);
+let filterOnlyLetters = el => el.match(/[^0-9^ ]/g).join('');
 
 console.log(filterOnlyLetters('vegeta777'));
 console.log(filterOnlyLetters('kenshifull777'));

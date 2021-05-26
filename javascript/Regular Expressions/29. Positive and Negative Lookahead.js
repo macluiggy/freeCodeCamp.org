@@ -3,6 +3,7 @@ let pwRegex = /(?=\w{6})(?=\w*\d{2})/g; // Change this line
 let result = pwRegex.test(sampleWord);
 let result2 = sampleWord.match(pwRegex);
 console.log(result)  
+console.log(result2)
 
 console.log('El perr0'.match(/^.*(?=\d)/gi))
 console.log(/^.*(?=\d)+/gi.test('El perr00'))

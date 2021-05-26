@@ -1,4 +1,4 @@
-let favWord = "favorite";
+let favWord = "favourite";
 let favRegex = new RegExp('favou?rite')
 let result = favRegex.test(favWord);
 console.log(result);

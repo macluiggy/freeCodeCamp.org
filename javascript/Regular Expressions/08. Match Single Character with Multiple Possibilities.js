@@ -4,7 +4,7 @@ let result = quoteSample.match(vowelRegex); // Change this line
 console.log(result);
 console.log(result.length);
 
-let names = ['Angel', 'Fernando', 'Angulo', 'Coveña'];
+let names = ['Angel', 'Fernando', 'Angulo', 'Coveña', 'aaaaaaaaaa'];
 let namesAn = []
 for (let i = 0, length1 = names.length; i < length1; i++) {
     const name = names[i];
