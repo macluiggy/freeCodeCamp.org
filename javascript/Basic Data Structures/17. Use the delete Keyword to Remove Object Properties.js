@@ -12,7 +12,7 @@ let foods = {
 // Only change code above this line
 
 console.log(foods);
-delete foods.oranges
+delete foods["oranges"]
 delete foods.plums
 delete foods.strawberries;
 console.log(foods)
