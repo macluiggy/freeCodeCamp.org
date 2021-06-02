@@ -7,8 +7,8 @@ let canary = new Bird("Tweety");
 let ownProps = [];
 // Only change code below this line
 for (let prop in canary) {
-	//if (prop in canary) ownProps.push(prop);
-	ownProps.push(prop);
+	if (canary.hasOwnProperty(prop)) ownProps.push(prop);
+	//ownProps.push(prop);
 
 }
 console.log(ownProps);

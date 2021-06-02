@@ -7,13 +7,13 @@ class Book {
         return this.author;
     }
     // setter
-    set writer(updatedAuthor) {
+    set setWriter(updatedAuthor) {
         this.author = updatedAuthor;
     }
 }
 const novel = new Book('anonymous');
 console.log(novel.writer);
-novel.writer = 'newAuthor';
+novel.setWriter = 'newAuthor';
 console.log(novel.writer);
 
 

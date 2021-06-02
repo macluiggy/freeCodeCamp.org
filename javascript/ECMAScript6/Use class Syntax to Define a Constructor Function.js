@@ -62,5 +62,6 @@ class Soldados {
     }
 }
 
+Soldados.prototype.legs = 2;//valor por defecto para todas las instancias de esta clase
 let soldados = new Soldados('juan', 'alberto', 'robertototo');
-console.log(soldados);
+console.log(soldados, soldados.legs);

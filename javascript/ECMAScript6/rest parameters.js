@@ -12,3 +12,4 @@ const sumaNums = (...args) => {
 	return result;
 }
 console.log(sumaNums(1, 2, 3, 4,100));
+

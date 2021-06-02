@@ -11,7 +11,10 @@ const { tomorrow: { low: lowTomorrow, high: highTomorrow }, today: { low: lowTod
 // Only change code above this line
 console.log(highToday + ', ' + highTomorrow);
 
-const { yesterday: { low: ayerBajo, high: ayerAlto }, today: { high: hoyAlto, low: hoyBajo } } = LOCAL_FORECAST;
+const {
+    yesterday: { low: ayerBajo, high: ayerAlto },
+    today: { high: hoyAlto, low: hoyBajo }
+} = LOCAL_FORECAST;
 console.log(`ayer bajo y alto: ${ayerBajo}, ${ayerAlto}
 hoy bajo y alto: ${hoyAlto}, ${hoyBajo}`);
 
@@ -23,5 +26,5 @@ const personas = {
 const { persona1: { nombre: name1, apellido: lastName1 } } = personas;
 console.log(`Me llamo ${name1.toLocaleUpperCase()} ${lastName1.toUpperCase()}`);
 
-const {persona2:{nombre:name2, apellido: lastName2}} = personas;
+const { persona2: { nombre: name2, apellido: lastName2 } } = personas;
 console.log(`Me llamo ${name2.toLocaleUpperCase()} ${lastName2.toUpperCase()}`);
