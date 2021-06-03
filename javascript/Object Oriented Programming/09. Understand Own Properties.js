@@ -12,3 +12,17 @@ for (let prop in canary) {
 
 }
 console.log(ownProps);
+
+Bird.prototype = {
+	constructor: Bird,
+	color: 'green'
+}
+
+let loro = new Bird('suri')
+let ownProps2 = []
+for (let prop in loro) {
+	if (loro.hasOwnProperty(prop)) ownProps2.push(prop);
+	//ownProps.push(prop);
+
+}
+console.log(ownProps2);

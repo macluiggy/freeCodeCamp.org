@@ -8,3 +8,5 @@ numLegs: 4,
 eat: function () {},
 describe: function () {}
 };
+
+console.log(Dog.name)

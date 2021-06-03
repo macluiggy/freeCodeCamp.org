@@ -1,9 +1,11 @@
-function Animal() { }
+function Animal() {
+  this.nombre = 'animaljsajfja'
+}
 
 Animal.prototype = {
   constructor: Animal,
   eat: function() {
-    console.log("nom nom nom");
+    return "nom nom nom"
   }
 };
 
@@ -13,4 +15,4 @@ function Dog() { }
 
 Dog.prototype = Object.create(Animal.prototype); // Change this
 let beagle = new Dog();
-console.log(beagle.eat())
+console.log(beagle.eat(), )

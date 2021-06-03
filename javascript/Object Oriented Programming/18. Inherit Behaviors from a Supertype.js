@@ -3,7 +3,7 @@ function Animal() { }
 Animal.prototype = {
   constructor: Animal,
   eat: function() {
-    console.log("nom nom nom");
+    return "nom nom nom"
   }
 };
 
@@ -11,4 +11,7 @@ Animal.prototype = {
 
 let duck = Object.create(Animal.prototype); // Change this line
 let beagle = Object.create(Animal.prototype); // Change this line
+let loro = new Animal()
+
 console.log(duck.eat())
+console.log(loro.eat())
