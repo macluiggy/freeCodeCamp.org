@@ -9,4 +9,4 @@ eat: function () {},
 describe: function () {}
 };
 
-console.log(Dog.name)
+console.log(Dog.prototype)
