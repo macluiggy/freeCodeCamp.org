@@ -12,6 +12,7 @@ function Bear(name) {
 
 Bear.prototype = {
   constructor: Bear,
+  constructor: Animal,
 };
 
 function Animal() { }
@@ -24,4 +25,6 @@ Animal.prototype = {
 
 };
 
-console.log(Animal.eat)
+console.log(Animal.prototype.eat())
+let perro = new Animal('loki')
+perro.eat()

@@ -16,6 +16,7 @@ Dog.prototype = {
   }
 };
 let thor = new Dog('thor')
-console.log(thor.numLegs)//ahora si va a poder mostrar esta propiedad
+console.log(thor.constructor)//ahora si va a poder mostrar esta propiedad
 
 console.log(Dog.prototype.numLegs, Dog.prototype.eat)
+thor.eat()

@@ -10,3 +10,4 @@ describe: function () {}
 };
 
 console.log(Dog.prototype)
+console.log(Dog)

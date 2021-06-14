@@ -15,6 +15,7 @@ function joinDogFraternity(candidate) {
 
 let thor = new Dog('thor');
 let mishu = new Cat('mishu');
+console.log(thor.constructor, Dog, mishu.constructor, Cat)
 
 console.log(joinDogFraternity(thor))
 console.log(joinDogFraternity(mishu))

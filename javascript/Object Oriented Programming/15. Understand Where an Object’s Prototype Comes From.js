@@ -12,3 +12,4 @@ let mishu = new Cat('mishu');
 
 console.log(Dog.prototype.isPrototypeOf(beagle))//beagle heredo sus prototype de Dog?
 console.log(Dog.prototype.isPrototypeOf(mishu))//mishu heredo sus prototype de Dog?
+console.log
