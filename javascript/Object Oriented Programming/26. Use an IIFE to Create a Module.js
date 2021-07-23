@@ -9,6 +9,9 @@ let funModule = (function() {
             obj.sing = function() {
                 console.log("Singing to an awesome tune");
             };
+        },
+        yaNoEsCute: function(obj) {
+            obj.isCute = function() { return false }
         }
     }
 })()
@@ -22,7 +25,6 @@ Person.prototype = {
 }
 
 
-
 let ross = new Person();
 console.log(ross)//al inicio solo tiene las propiedades que se establecieron en la funcion constructor
 funModule.isCuteMixin(ross)
@@ -31,4 +33,9 @@ funModule.singMixin(ross)
 console.log(ross)
 console.log(ross.isCute())
 ross.sing()
+
+funModule.yaNoEsCute(ross)
+console.log(ross.isCute())
+funModule.isCuteMixin(ross)
+console.log(ross.isCute())
 //ahora tiene las propiedades anteriores mas las que se añaden en el modulo
