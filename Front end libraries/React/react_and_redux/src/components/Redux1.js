@@ -89,7 +89,6 @@ store.dispatch(addNoteText('Hello!'));
 console.log(store.getState().addNote);
 
 
-
 /////////////////////////////////
 //\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 /////////////////////////////////
