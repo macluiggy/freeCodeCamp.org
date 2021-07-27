@@ -1,5 +1,5 @@
 import {createStore} from 'redux';
-import { Component } from 'react';
+import { Component, useState, useEffect } from 'react';
 import { connect, Provider } from 'react-redux';
 
 // Redux:
@@ -27,21 +27,15 @@ const messageReducer = (state = [], action) => {
 const store = createStore(messageReducer);
 
 // React:
-class Presentational extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      input: '',
-    }
-    this.handleChange = this.handleChange.bind(this);
-    this.submitMessage = this.submitMessage.bind(this);
-  }
-  handleChange(event) {
-    this.setState({
+function Presentational({submitNewMessage, messages}) {
+  const [input, setInput] = useState('')
+  const handleChange = (event) => {
+    /*this.setState({
       input: event.target.value
-    });
+    });*/
+    setInput(event.target.value);
   }
-  submitMessage() {
+  const submitMessage = () => {
     /*this.setState((state) => {
       const currentMessage = state.input;
       return {
@@ -49,18 +43,21 @@ class Presentational extends Component {
         messages: state.messages.concat(currentMessage)
       };
     });*/
-    this.props.submitNewMessage(this.state.input);
+    //props.submitNewMessage(input);
+    submitNewMessage({
+      type: ADD,
+      message: input,
+    });
   }
-  render() {
-    return (
+  return (
       <div>
         <h2>Type in a new Message:</h2>
         <input
-          value={this.state.input}
-          onChange={this.handleChange}/><br/>
-        <button onClick={this.submitMessage}>Submit</button>
+          value={input}
+          onChange={handleChange}/><br/>
+        <button onClick={submitMessage}>Submit</button>
         <ul>
-          {this.props.messages.map( (message, idx) => {
+          {messages.map( (message, idx) => {
               return (
                  <li key={idx}>{message}</li>
               )
@@ -69,7 +66,6 @@ class Presentational extends Component {
         </ul>
       </div>
     );
-  }
 };
 
 // React-Redux:
@@ -77,10 +73,17 @@ const mapStateToProps = (state) => {
   return { messages: state }
 };
 
-const mapDispatchToProps = (dispatch) => {
+/*const mapDispatchToProps = (dispatch) => {
   return {
     submitNewMessage: (newMessage) => {
        dispatch(addMessage(newMessage))
+    }
+  }
+};*/
+const mapDispatchToProps = (dispatch) => {
+  return {
+    submitNewMessage: (dispatchObject) => {
+       dispatch(dispatchObject)
     }
   }
 };
@@ -89,7 +92,7 @@ const mapDispatchToProps = (dispatch) => {
 // Define the Container component here:
 const Container = connect(mapStateToProps, mapDispatchToProps)(Presentational)
 
-class AppWrapper extends Component {
+class AppWrapper2 extends Component {
   constructor(props) {
     super(props);
   }
@@ -103,4 +106,4 @@ class AppWrapper extends Component {
   }
 };
 
-export default AppWrapper;
+export default AppWrapper2;

@@ -7,6 +7,7 @@ import Redux, { createStore } from 'react-redux'
 //import Redux1 from './components/Redux1.jsx'
 import Redux2 from './components/Redux2.jsx'
 import AppWrapper from './components/Presentational'
+import AppWrapper2 from './components/PresentationalHook'
 function App() {
   return (
     <>
@@ -17,7 +18,10 @@ function App() {
         < Redux1 />
         <Redux2 />
       */}
+      Class component
       <AppWrapper />
+      Functional component
+      <AppWrapper2 />
     </>
   );
 }
