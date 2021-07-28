@@ -5,14 +5,19 @@ import { createStore } from 'redux';
 const CHANGE_WIDTH = 'CHANGE_WIDTH';
 const CHANGE_HEIGHT= 'CHANGE_HEIGHT';
 const SHOW_WARNING = 'SHOW_WARNING';
+const CHANGE_COLOR = 'CHANGE_COLOR';
+
+const rN = () => Math.floor(Math.random() * 255 + 1);
+const getRandomColor = () => `rgb(${rN()}, ${rN()}, ${rN()})`;
 
  const initialState = {
  	width: '100px',
  	height: '100px',
- 	warning: ''
+ 	warning: '',
+ 	color: getRandomColor(),
  }
 const changeSizeReducer = (state = initialState, action) => {
-	switch (action.type) {
+	/*switch (action.type) {
 		case CHANGE_WIDTH:
 			return {
 				...state,
@@ -32,14 +37,35 @@ const changeSizeReducer = (state = initialState, action) => {
 			}
 		default:
 			return state;
-	}
+	}*/
+
+	return {
+		CHANGE_WIDTH: {
+			...state,
+			width: action.width,
+			warning: '',
+		},
+		CHANGE_HEIGHT: {
+			...state,
+			height: action.height,
+			warning: '',
+		},
+		SHOW_WARNING: {
+			...state,
+			warning: 'please enter a number'
+		},
+		CHANGE_COLOR: {
+			...state,
+			color: getRandomColor(),
+		}
+	}[action.type] || state;
 }
 
-const store = createStore(changeSizeReducer);
+const tienda = createStore(changeSizeReducer);
 
 //react
-const Comp = ({ changeWidth, changeHeight, showWarning, state}) => {
-	const {width, height, warning} = state
+const Comp = ({ changeWidth, changeHeight, showWarning, changeColor, state}) => {
+	const {width, height, warning, color} = state
 
 	const changeWidthSize = e => {
 		//console.log(props)
@@ -47,14 +73,16 @@ const Comp = ({ changeWidth, changeHeight, showWarning, state}) => {
 			return showWarning()
 		}
 		changeWidth(e.target.value)
-		
+		changeColor()
+		console.log(color)
 	}
 	const changeHeightSize = e => {
-		console.log(/[1-9]+/g.test(e.target.value))
+		//console.log(/[1-9]+/g.test(e.target.value))
 		if (!/[1-9]+/g.test(e.target.value)) {
 			return showWarning()
 		}
 		changeHeight(e.target.value)
+		changeColor()
 	}
 	return (
 		<div>
@@ -73,6 +101,8 @@ const Comp = ({ changeWidth, changeHeight, showWarning, state}) => {
 				border: 'solid',
 				width: width,
 				height: height,
+				backgroundColor: color,
+				transition: 'background-color 0.5s ease',
 			}}>
 			</div>
 		</div>
@@ -84,7 +114,8 @@ const mapDispatchToProps = dispatch => {
 	return {
 		changeWidth: width => dispatch({ type: CHANGE_WIDTH, width: `${width}px` }),
 		changeHeight: height => dispatch({ type: CHANGE_HEIGHT, height: `${height}px`}),
-		showWarning: () => dispatch({ type: SHOW_WARNING })
+		showWarning: () => dispatch({ type: SHOW_WARNING }),
+		changeColor: () => dispatch({ type: CHANGE_COLOR }),
 	}
 }
 const mapStateToProps = state => {
@@ -97,7 +128,7 @@ const Container = connect(mapStateToProps, mapDispatchToProps)(Comp);
 
 const ChangeSize = () => {
 	return (
-		<Provider store={store} >
+		<Provider store={tienda} >
 			<Container />
 		</Provider>
 		)
