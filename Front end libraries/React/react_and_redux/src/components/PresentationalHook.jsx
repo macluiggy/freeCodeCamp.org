@@ -92,18 +92,12 @@ const mapDispatchToProps = (dispatch) => {
 // Define the Container component here:
 const Container = connect(mapStateToProps, mapDispatchToProps)(Presentational)
 
-class AppWrapper2 extends Component {
-  constructor(props) {
-    super(props);
-  }
-  render() {
-    // Complete the return statement:
-    return (
+const AppWrapper2 = () => {
+  return (
       <Provider store={store} >
         <Container />
       </Provider>
     );
-  }
 };
 
 export default AppWrapper2;

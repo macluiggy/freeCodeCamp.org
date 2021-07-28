@@ -8,6 +8,7 @@ import Redux, { createStore } from 'react-redux'
 import Redux2 from './components/Redux2.jsx'
 import AppWrapper from './components/Presentational'
 import AppWrapper2 from './components/PresentationalHook'
+import Contador from './components/Contador'
 function App() {
   return (
     <>
@@ -16,12 +17,9 @@ function App() {
   */}
       {/*
         < Redux1 />
-        <Redux2 />
+        <Redux2 /><AppWrapper /><AppWrapper2 />
       */}
-      Class component
-      <AppWrapper />
-      Functional component
-      <AppWrapper2 />
+      <Contador />
     </>
   );
 }
