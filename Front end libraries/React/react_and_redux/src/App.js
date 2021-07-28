@@ -9,6 +9,8 @@ import Redux2 from './components/Redux2.jsx'
 import AppWrapper from './components/Presentational'
 import AppWrapper2 from './components/PresentationalHook'
 import Contador from './components/Contador'
+import ChangeSize from './components/ChangeSize'
+
 function App() {
   return (
     <>
@@ -17,9 +19,9 @@ function App() {
   */}
       {/*
         < Redux1 />
-        <Redux2 /><AppWrapper /><AppWrapper2 />
+        <Redux2 /><AppWrapper /><AppWrapper2 /> <Contador />
       */}
-      <Contador />
+     <ChangeSize />
     </>
   );
 }

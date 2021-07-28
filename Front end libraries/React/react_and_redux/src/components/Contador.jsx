@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import { connect, Provider} from 'react-redux';
 import { createStore } from 'redux';
 
@@ -36,7 +36,7 @@ const store = createStore(incrementReducer);
 
 //react
 const Comp = (props) => {
-	//const [state, setState] = useState() 
+	const [state, setState] = useState(props.value) 
 	//console.log(props)
 	const inc = () => {
 		props.increaseValue()
@@ -48,12 +48,17 @@ const Comp = (props) => {
 		//props.resetValue({ type: RESET })
 		props.resetValue(reset())
 	}
+
+	useEffect(() => {
+		console.log(`rendered`)
+		setState(props.value)
+	}, [props.value])
 	return (
 	 		<div>
 	 			<button onClick={inc} >+</button>
 	 			<button onClick={dec} >-</button>
 	 			<button onClick={rst} >reset</button>
-	 			<p>{props.value} </p>
+	 			<p>{state} </p>
 	 		</div>
 		)
 }
