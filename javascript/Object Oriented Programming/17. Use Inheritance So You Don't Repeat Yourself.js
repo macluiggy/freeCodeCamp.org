@@ -25,6 +25,6 @@ Animal.prototype = {
 
 };
 
-console.log(Animal.prototype.eat())
-let perro = new Animal('loki')
+Animal.prototype.eat()
+let perro = new Animal('loki') || Object.create(Animal.prototype)
 perro.eat()

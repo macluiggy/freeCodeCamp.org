@@ -15,3 +15,7 @@ let loro = new Animal()
 
 console.log(duck.eat())
 console.log(loro.eat())
+
+const { constructor, eat } = Animal.prototype;
+
+console.log( constructor, Animal, eat)
