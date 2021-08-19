@@ -20,11 +20,12 @@ Window.prototype.tabClose = function (index) {
 
   // Only change code below this line
 
-  var tabsBeforeIndex = this.tabs.splice(0, index); // Get the tabs before the tab
-  var tabsAfterIndex = this.tabs.splice(index + 1); // Get the tabs after the tab
-
-  this.tabs = tabsBeforeIndex.concat(tabsAfterIndex); // Join them together
-
+  //var tabsBeforeIndex = this.tabs.slice(0, index); // Get the tabs before the tab
+  //var tabsAfterIndex = this.tabs.slice(index + 1); // Get the tabs after the tab
+  //console.log(this.tabs, tabsBeforeIndex)
+  let arr = this.tabs
+  this.tabs = this.tabs.filter(tab => tab !== this.tabs[index]) //tabsBeforeIndex.concat(tabsAfterIndex); // Join them together
+  //this.tabs.splice(index, 1)
   // Only change code above this line
 
   return this;
@@ -39,5 +40,5 @@ var videoWindow = new Window(['Netflix', 'YouTube', 'Vimeo', 'Vine']); // Entert
 var finalTabs = socialWindow
   .tabOpen() // Open a new tab for cat memes
   .join(videoWindow.tabClose(2)) // Close third tab in video window, and join
-  .join(workWindow.tabClose(1).tabOpen());
+  .join(workWindow.tabClose(1).tabOpen('xvideos'));
 console.log(finalTabs.tabs);
