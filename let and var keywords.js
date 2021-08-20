@@ -19,3 +19,5 @@ for (var i = 0; i < 3; i++) {
   let arr33 = arr22.slice();
 
   console.log(arr33)
+
+  console.log('hello')
