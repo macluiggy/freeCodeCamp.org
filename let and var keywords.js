@@ -15,10 +15,7 @@ for (var i = 0; i < 3; i++) {
  
   console.log(i);
 
-let saludammvrg = () => 'hola'
-console.log(saludammvrg())
+  let arr22 = [1,2];
+  let arr33 = arr22.slice();
 
-let arr = ['Netflix', 'YouTube', 'Vimeo', 'Vine'];
-
-arr = arr.filter((tab, i, arr) => tab !== arr[2])
-console.log(arr)
+  console.log(arr33)
