@@ -5,4 +5,4 @@ function nonMutatingSort(arr) {
   return [...arr].sort((a, b) => a-b)
   // Only change code above this line
 }
-nonMutatingSort(globalArray);
+console.log(nonMutatingSort(globalArray));

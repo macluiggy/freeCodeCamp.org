@@ -11,7 +11,7 @@ Window.prototype.join = function (otherWindow) {
 
 // When you open a new tab at the end
 Window.prototype.tabOpen = function (tab) {
-  this.tabs.push('new tab'); // Let's open a new tab for now
+  this.tabs.push(tab || 'new tab'); // Let's open a new tab for now
   return this;
 };
 
@@ -23,7 +23,6 @@ Window.prototype.tabClose = function (index) {
   //var tabsBeforeIndex = this.tabs.slice(0, index); // Get the tabs before the tab
   //var tabsAfterIndex = this.tabs.slice(index + 1); // Get the tabs after the tab
   //console.log(this.tabs, tabsBeforeIndex)
-  let arr = this.tabs
   this.tabs = this.tabs.filter(tab => tab !== this.tabs[index]) //tabsBeforeIndex.concat(tabsAfterIndex); // Join them together
   //this.tabs.splice(index, 1)
   // Only change code above this line

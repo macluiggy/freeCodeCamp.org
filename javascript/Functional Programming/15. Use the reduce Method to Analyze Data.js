@@ -123,7 +123,7 @@ function getRating(watchList){
     .filter(({Director}) => Director == "Christopher Nolan")
 
   let averageRating = christoperNolanMovies
-                        .reduce((sum, current) => sum + parseFloat (current.rating) , 0)
+                        .reduce((sum, {rating}) => sum + parseFloat (rating), 0)
                         / christoperNolanMovies.length
   //console.log(christoperNolanMovies)
     
