@@ -18,3 +18,5 @@ function translatePigLatin(str) {
 
 console.log(translatePigLatin("consonant"));
 console.log(translatePigLatin("glove"))
+
+console.log('log message'.capitalize())
