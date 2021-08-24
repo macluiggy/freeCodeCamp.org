@@ -34,4 +34,9 @@ for (var i = 0; i < 3; i++) {
     }
   }
 
-  console.log(/\s/g.test('hola '))
+  console.log('hola '.match(/[^aeiou]/g))
+
+  let str = 'hello'
+
+  let str2 = str.replace(str[0], '') + str[0]
+  console.log(str2)

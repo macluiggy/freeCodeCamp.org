@@ -1,12 +1,20 @@
 function translatePigLatin(str) {
   let rgx = /^[aeiou]/gi
+  let str2 = '';
   if (rgx.test(str)) {
     console.log('empieza por vocal')
+    str2 = str + 'way'
   } else {
     console.log('empieza por consonant')
-    str
+    str2 = str
+      .replace(/^[^aeiou]+/g, '')
+      + str.match(/^[bcdfghjklmnpqrstvwxys]+/g)
+      + 'ay'
+      //donde [^aeiou] === [bcdfghjklmnpqrstvwxys] la primera es todo lo que 
+      //sea diferente a las vocales lo otro es todo los que sean consonantes
   }
-  return str;
+  return str2;
 }
 
-translatePigLatin("consonant");
+console.log(translatePigLatin("consonant"));
+console.log(translatePigLatin("glove"))
