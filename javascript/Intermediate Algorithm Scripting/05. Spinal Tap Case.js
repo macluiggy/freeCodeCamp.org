@@ -1,9 +1,10 @@
 function spinalCase(str) {
   return str
-  .split(/\s|\W|_/)
-  .map(word => word.replace(/[A-Z]/g, L => ' '+L.toLowerCase()))[0]
-  .split(/\s/)
+  .replace(/([a-z])([A-Z])/g, "$1 $2")
+  .split(/\s|_/)
   .join('-')
+  .toLowerCase()
 }
 
+console.log(spinalCase("The_Andy_Griffith_Show"));
 console.log(spinalCase("thisIsSpinalTap"));
