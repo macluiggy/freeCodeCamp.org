@@ -30,4 +30,4 @@ function sumPrimes(num) {
               .length === 2 // filtra ese array para los numeros que tengan dos divisores que devuelvan un entero 1 y a si mismo, osea los numeros primos
   }).reduce((sum, current) => sum + current);//devuelve la suma de los numeros filtrados
 }
-console.log(sumPrimes(10));
+console.log(sumPrimes(500));
