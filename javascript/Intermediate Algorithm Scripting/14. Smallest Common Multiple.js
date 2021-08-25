@@ -1,22 +1,21 @@
 function smallestCommons(arr) {
-  arr.sort((a, b) => a - b)
+  const [min, max] = arr.sort((a, b) => a - b)
   let arr2 = []
-  for (var i = 1; i <= arr[arr.length-1]; i++) {
+  for (var i = min; i <= max; i++) {
     arr2.push(i)
   }
-  console.log(arr2)
-  let boolean = true;
-  let x = 1;
-  while (boolean) {
-    console.log(arr2.every(n => x/n === parseInt(x/n)))
-    if (arr.every(n => x/n === parseInt(x/n))) {
-      boolean = false
-    } else {
-      x+=1
-    }
-  }
-  return x;
+  return isEveryDivisible(arr2, 1)
 }
 
+function isEveryDivisible(arr, x) {
+    return arr.every(n => x/n === parseInt(x/n))
+            ? x 
+            : isEveryDivisible(arr, x+1)
+  }
+/*Array.prototype.smallestCommonMultiple = (x) => 
+            this.every(n => x/n === parseInt(x/n))
+            ? x 
+            : this.smallestCommonMultiple(x+1)*/
+console.log(smallestCommons([2, 10]));
 
-console.log(smallestCommons([1,6]));
+//console.log(Array(4).fill('kk'))
