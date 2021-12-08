@@ -1,3 +1,4 @@
+/*
 
 let arr1 = ['one', 'two', 'three'];
 let arr2 = ['one', 'two2']
@@ -10,7 +11,7 @@ let removed = arr1.splice(index, 1);
 
 
 for (var i = 0; i < 3; i++) {
-	var sum = 0;
+    var sum = 0;
   }
  
   //console.log(i);
@@ -40,3 +41,21 @@ for (var i = 0; i < 3; i++) {
 
   let str2 = str.replace(str[0], '') + str[0]
   console.log(str2)
+let arr = [1,24,3]
+
+console.log(arr.reverse())
+
+console.log('log message.jsx'.match(/.*.(js|jsx|tsx)$/gi))
+
+
+*/
+
+function saluda() {
+    // body...
+    var hola = 'hola'
+    console.log(hola)
+    return hola
+}
+ saluda()
+
+console.log(hola)

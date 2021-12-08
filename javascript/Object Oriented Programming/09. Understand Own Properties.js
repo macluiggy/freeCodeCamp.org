@@ -20,9 +20,12 @@ Bird.prototype = {
 
 let loro = new Bird('suri')
 let ownProps2 = []
+let noOwnProps2 = []
 for (let prop in loro) {
 	if (loro.hasOwnProperty(prop)) ownProps2.push(prop);
+	else noOwnProps2.push(prop)
 	//ownProps.push(prop);
 
 }
 console.log(ownProps2);
+console.log(noOwnProps2);
