@@ -12,3 +12,4 @@ console.log('el numero de patas son ' + sofi.numLegs)
 
 console.log(Dog.prototype)
 console.log(Dog)
+console.log(sofi)

@@ -19,10 +19,15 @@ console.log(thor.constructor, Dog, mishu.constructor, Cat);
 console.log(joinDogFraternity(thor));
 console.log(joinDogFraternity(mishu));
 
-function Car() {}
+function Car(s) {
+  this.brand = 's'
+  return this.brand
+}
 function ElectricCar() {}
 let electricCar = new ElectricCar();
 let car = new Car();
+// console.log(Car());
+// console.log(car);
 function isElectric(car) {
   return ElectricCar.prototype.isPrototypeOf(car)
     ? "Charging..."

@@ -1,8 +1,11 @@
 function Dog(name) {
   this.name = name;
 }
-function Cat(name) {
-  this.name = name;
+class Cat /*extends Dog*/{
+  constructor(name) {
+    // super(name)
+    this.name = name;
+  }
 }
 
 let beagle = new Dog("Snoopy");

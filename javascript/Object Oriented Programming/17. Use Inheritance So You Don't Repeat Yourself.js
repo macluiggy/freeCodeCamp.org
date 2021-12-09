@@ -15,16 +15,18 @@ Bear.prototype = {
   constructor: Animal,
 };
 
-function Animal() { }
+function Animal(name) {
+  this.name = name;
+}
 
 Animal.prototype = {
   constructor: Animal,
-  eat: function() {
+  eat: function () {
     console.log("nom nom nom");
-  }
-
+  },
 };
 
-Animal.prototype.eat()
-let perro = new Animal('loki') || Object.create(Animal.prototype)
-perro.eat()
+Animal.prototype.eat();
+let perro = new Animal("loki") || Object.create(Animal.prototype);
+perro.eat();
+console.log(perro.name);
